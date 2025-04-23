@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://oe2g0w8jhplt"]
+
+[ext_resource type="PackedScene" uid="uid://dynn84fts1ffg" path="res://personaje.tscn" id="1_8ycel"]
+[ext_resource type="Texture2D" uid="uid://dxlqmx7vbapk4" path="res://minecraft_94415.webp" id="2_nnu1l"]
+[ext_resource type="PackedScene" uid="uid://boxy06r2drxhy" path="res://pared.tscn" id="3_kb1ak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb1ak"]
+size = Vector2(431, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdr0v"]
+size = Vector2(522, 105.5)
+
+[node name="Escenario" type="Node2D"]
+
+[node name="Personaje" parent="." instance=ExtResource("1_8ycel")]
+position = Vector2(104, 480)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(642, 344)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-427, 248)
+scale = Vector2(0.935547, 0.234375)
+texture = ExtResource("2_nnu1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-430.5, 252)
+shape = SubResource("RectangleShape2D_kb1ak")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(255.3, 248)
+scale = Vector2(1.14336, 0.25)
+texture = ExtResource("2_nnu1l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(253, 248.25)
+shape = SubResource("RectangleShape2D_rdr0v")
+
+[node name="pared" parent="." instance=ExtResource("3_kb1ak")]
+position = Vector2(1058, 370)

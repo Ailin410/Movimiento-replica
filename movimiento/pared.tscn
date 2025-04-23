@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxy06r2drxhy"]
+
+[ext_resource type="Texture2D" uid="uid://dxlqmx7vbapk4" path="res://minecraft_94415.webp" id="1_dk1tx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li5il"]
+size = Vector2(133, 646)
+
+[node name="pared" type="RigidBody2D"]
+position = Vector2(1013, 482)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -154.56)
+scale = Vector2(0.3, 1.43578)
+texture = ExtResource("1_dk1tx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -158)
+shape = SubResource("RectangleShape2D_li5il")
